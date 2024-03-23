@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+img {
+    max-width: 95%;
+    display: block;
+} 
+ /* .container {
+    max-width: 950px;
+    margin: 50px auto 25px;
+
+}  */
+
+.slider-wrapper-two {
+width: 100px;
+
+} 
+.cliders {
+ 
+    margin: 0 auto;
+    width: 10px;
+}
+
+.btn{
+border: none;
+background: transparent;
+outline: none;
+visibility: hidden;
+}
+.slider-btn {
+width: 45px;
+height: 45px;
+background-color: #dddddd80;
+border-radius: 50%;
+padding: 10px;
+position: absolute;
+z-index: 2;
+top: 50%;
+transform: translateY(-50%);
+transition: 0.2s ease-in-out;
+
+}
+
+.slider-btn:hover {
+    background-color:#dddddd;
+}
+.slider-prev {
+    left: -50px;
+}
+.slider-next {
+    right: -50px;
+}
+.slick-dots {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    list-style: none;
+gap: 5px;
+
+}
+.slick-dots li {
+    line-height: 0;
+    font-size: 0;
+}
+.slick-dots li button {
+    line-height: 0;
+    font-size: 0;
+    border: none;
+    width: 10px;
+    height: 10px;
+    background:#727272;
+
+    border-radius: 50%;
+}
+
+.slick-dots li.slick-active button {
+background: #dddddd;
+}
+.cliders-two .clider-block {
+   
+    width: fit-content;
+}
+.cliders-two {
+    margin-top: 30px;
+    width: fit-content;
+}
+
+/* Характеристика */
+
+.main-characteristic {
+    margin-top: 100px;
+}
+.main-characteristic h1{
+ font-family: 'Inter';
+font-style: normal;
+font-weight: 900;
+font-size: 40px;
+line-height: 63px;
+color: #C14231;
+
+}
+.main-characteristic-block {
+    display: flex;
+    justify-content: space-between;
+}
+.main-characteristic-left {
+    width: 48%;
+}
+.main-characteristic-right {
+    width: 48%;
+}
+.charact__p {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0 10px 0;
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 25px;
+text-align: justify;
+
+color: #737373;
+}
+.charact__h {
+    padding-bottom: 10px;
+    padding-top: 25px;
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 100%;
+color: #1C1C1C;
+}
+
+/* Отзывы */
+
+.main-reviews {
+    margin: 100px 0 0 0;
+}
+
+.main-reviews-block {
+    display: flex;
+    flex-wrap: wrap;
+ 
+}
+
+.main-reviesw__h h1 {
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 900;
+font-size: 40px;
+line-height: 63px;
+color: #C14231;
+
+}
+
+.main-reviews-item {
+    width: 25%;
+    margin-top: 50px;
+    margin-right: 24px;
+    padding: 40px 30px 30px 30px;
+    background: #FFFFFF;
+box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+border-radius: 20px;
+}
+.main-reviews-item__h {
+    padding-bottom: 17px;
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 100%;
+color: #1C1C1C;
+}
+.main-reviesw__p {
+ padding-bottom: 26px;
+ font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 20px;
+text-align: justify;
+color: #737373;
+}
+.main-reviews-date {
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 20px;
+text-align: justify;
+color: #737373;
+}
+
