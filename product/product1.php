@@ -3,7 +3,9 @@
     $id = $_GET['id'];
     $result =  mysqli_query($link, "SELECT * FROM `products` WHERE id = '$id'");
     $product = mysqli_fetch_array($result);
-    
+    session_start();
+    include '../core.php';
+   
     $productReviews = mysqli_query($link, "SELECT * FROM `reviews` WHERE product_id = '$id'");
     if(!$product['count_reviews'] == 0){
         $productPoint = $product['point']/$product['count_reviews'];
@@ -51,6 +53,7 @@
             </div>
 
             <!-- Форма отзыва  -->
+           
             <form action="../addReview.php" method="post">
                 <div class="main-modal-name">
                     <input type="hidden" name="product_id" value="<?=$id?>">
@@ -107,10 +110,17 @@
                             <label class="label_small" for=""><?=$product['guarantee']?></label>
                         </div>
                 </div>
+                <?php if(!isset($_SESSION['user'])): ?>
+                    <div class="buttonss">
+                        <a href="../login.php"><button  class="button_product">В корзину</button></a>
+                        <a href="../login.php">  <button  name="modal-add" class="button_product">Написать отзыв</button></a>
+                    </div>
+                <?php else: ?>
                     <div class="buttonss">
                         <button name="cart" class="button_product">В корзину</button>
                         <button  id="main-middle-right-reviews" onclick="add()"  name="modal-add" class="button_product">Написать отзыв</button>
                     </div>
+                <?php endif; ?> 
                     <div class="marks_review">
                         <div class="p_review">Средняя оценка игроков</div>
                         <div class="num_review"><?=$productPoint?><div class="star_review"><img src="../assets/img/Star 1.png" alt="" class="star_img_review"></div></div>

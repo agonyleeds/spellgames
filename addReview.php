@@ -1,4 +1,9 @@
 <?php 
+
+    if(!isset($_SESSION['user'])){
+    header("Location: index.php");
+    } 
+
     include 'core.php';
     if(!empty($_POST['review_author']) and !empty($_POST['review_desc'])){
         $review_author = $_POST['review_author'];
